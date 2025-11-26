@@ -31,6 +31,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -153,8 +154,8 @@ fun DragAndDropBoxes(modifier: Modifier = Modifier) {
                 .background(Color.Red)
         ) {
             Icon(
-                imageVector = Icons.Default.Face,
-                contentDescription = "Face",
+                imageVector = Icons.Default.MailOutline,
+                contentDescription = "Rect",
                 modifier = Modifier
                     .padding(10.dp)
                     .offset(pOffset.x.dp, pOffset.y.dp)
