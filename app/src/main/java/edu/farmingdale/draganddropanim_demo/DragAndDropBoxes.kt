@@ -93,8 +93,13 @@ fun DragAndDropBoxes(modifier: Modifier = Modifier) {
                             target = remember {
                                 object : DragAndDropTarget {
                                     override fun onDrop(event: DragAndDropEvent): Boolean {
-                                        isPlaying = !isPlaying
                                         dragBoxIndex = index
+
+                                        isPlaying = when (index) {
+                                            0, 1 -> true  // animate up
+                                            2, 3 -> false // animate down
+                                            else -> true
+                                        }
                                         return true
                                     }
                                 }
