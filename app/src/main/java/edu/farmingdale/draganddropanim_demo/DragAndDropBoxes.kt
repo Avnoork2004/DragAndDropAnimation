@@ -31,6 +31,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -101,12 +102,9 @@ fun DragAndDropBoxes(modifier: Modifier = Modifier) {
                         enter = scaleIn() + fadeIn(),
                         exit = scaleOut() + fadeOut()
                     ) {
-                        Text(
-                            text = "Right",
-                            fontSize = 40.sp,
-                            color = Color.Red,
-                            fontWeight = FontWeight.Bold,
-
+                        Icon(
+                            imageVector = Icons.Default.Home,
+                            contentDescription = null,
                             modifier = Modifier
                                 .fillMaxSize()
                                 .dragAndDropSource {
@@ -114,10 +112,7 @@ fun DragAndDropBoxes(modifier: Modifier = Modifier) {
                                         onLongPress = { offset ->
                                             startTransfer(
                                                 transferData = DragAndDropTransferData(
-                                                    clipData = ClipData.newPlainText(
-                                                        "text",
-                                                        ""
-                                                    )
+                                                    clipData = ClipData.newPlainText("text", "")
                                                 )
                                             )
                                         }
