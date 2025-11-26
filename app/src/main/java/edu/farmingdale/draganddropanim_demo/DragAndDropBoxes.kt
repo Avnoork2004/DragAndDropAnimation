@@ -155,7 +155,7 @@ fun DragAndDropBoxes(modifier: Modifier = Modifier) {
                 contentDescription = "Rect",
                 modifier = Modifier
                     .padding(10.dp)
-                    .offset(pOffset.x.dp, pOffset.y.dp)
+                    .offset(pOffset.x.dp, pOffset.y.dp) //todo7
                     .graphicsLayer(                     //todo6
                         rotationZ = rtatView,
                         transformOrigin = TransformOrigin.Center
